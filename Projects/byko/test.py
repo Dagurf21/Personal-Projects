@@ -1,7 +1,7 @@
 import csv
 
 # Specify the path to your CSV file
-csv_file_path = 'Projects/byko/csvfile.csv'
+csv_file_path = 'Dagurf21/Personal-Projects/Projects/byko/csvfile.csv'
 
 # Open the CSV file
 with open(csv_file_path, 'r', newline='', encoding='utf-8') as csv_file:
