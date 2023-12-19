@@ -1,0 +1,47 @@
+def num_to_bin(num):
+    bin_num = bin(num)
+    return str(bin_num[2:])
+
+def num_to_oct(num):
+    oct_num = oct(num)
+    return str(oct_num [2:])
+
+def num_to_hex(num):
+    hex_num = hex(num)
+    return str(hex_num[2:])
+
+def num_to_duo(num):
+    duo_num = 
+
+def count_occur(int_str: str, search_for: str) -> int:
+    count = 0
+    for char in int_str:
+        if char == search_for:
+            count += 1
+        else:
+            pass
+    return count
+
+org_number, max_occur_of = map(int, input().split())
+
+bin_num = num_to_bin(org_number)
+bin_num_count = count_occur(bin_num, str(max_occur_of))
+
+hex_num = num_to_hex(org_number)
+hex_num_count = count_occur(hex_num, str(max_occur_of))
+
+oct_num = num_to_oct(org_number)
+oct_num_count = count_occur(oct_num, str(max_occur_of))
+
+print (bin_num)
+print (bin_num_count)
+print (hex_num)
+print (hex_num_count)
+print (oct_num)
+print (oct_num_count)
+
+
+
+
+if max_occur_of == 0 or 1:
+    bin_num
