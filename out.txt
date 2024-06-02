@@ -1,0 +1,60 @@
+
+
+TESTING THE BASIC STUFF
+
+   -   current value: None   -   size: 0
+A    -   current value: None   -   size: 1
+B A    -   current value: None   -   size: 2
+C B A    -   current value: None   -   size: 3
+D C B A    -   current value: None   -   size: 4
+E D C B A    -   current value: None   -   size: 5
+E D C B A    -   current value: None   -   size: 5
+E D C B A    -   current value: None   -   size: 5
+E D 1 C B A    -   current value: None   -   size: 6
+E D 2 1 C B A    -   current value: None   -   size: 7
+E D 2 1 C B A    -   current value: None   -   size: 7
+E D 2 3 1 C B A    -   current value: None   -   size: 8
+E D 2 4 3 1 C B A    -   current value: None   -   size: 9
+E D 2 4 3 1 C B A    -   current value: None   -   size: 9
+E D 2 VALUE 4 3 1 C B A    -   current value: None   -   size: 10
+E D 2 VALUE 4 3 1 C B A    -   current value: None   -   size: 10
+E D 2 4 3 1 C B A    -   current value: None   -   size: 9
+E D 4 3 1 C B A    -   current value: None   -   size: 8
+E 4 3 1 C B A    -   current value: None   -   size: 7
+E 4 3 1 C B A    -   current value: None   -   size: 7
+4 3 1 C B A    -   current value: None   -   size: 6
+4 3 1 C B A    -   current value: None   -   size: 6
+4 3 1 C B A    -   current value: None   -   size: 6
+4 3 1 C B A    -   current value: None   -   size: 6
+4 3 1 C B A    -   current value: None   -   size: 6
+4 3 1 C B A    -   current value: None   -   size: 6
+4 3 1 C B A    -   current value: None   -   size: 6
+4 3 1 C B A    -   current value: None   -   size: 6
+4 3 1 C B A    -   current value: None   -   size: 6
+4 3 1 C B A    -   current value: None   -   size: 6
+4 3 1 C B A    -   current value: None   -   size: 6
+4 3 1 C B A    -   current value: None   -   size: 6
+4 3 1 C B A    -   current value: None   -   size: 6
+4 3 1 C B A    -   current value: None   -   size: 6
+4 3 1 C B A    -   current value: None   -   size: 6
+4 3 1 B A    -   current value: None   -   size: 5
+4 3 1 B A    -   current value: None   -   size: 5
+4 3 1 B A    -   current value: None   -   size: 5
+4 3 1 B A    -   current value: None   -   size: 5
+4 3 B A    -   current value: None   -   size: 4
+4 B A    -   current value: None   -   size: 3
+B A    -   current value: None   -   size: 2
+B A    -   current value: None   -   size: 2
+
+
+TESTING MORE COMPLEX STUFF
+
+   -   current value: None   -   size: 0
+A    -   current value: None   -   size: 1
+B1 A    -   current value: None   -   size: 2
+C B1 A    -   current value: None   -   size: 3
+A C B1 A    -   current value: None   -   size: 4
+B2 A C B1 A    -   current value: None   -   size: 5
+B2 A C B1 A    -   current value: None   -   size: 5
+C B2 A C B1 A    -   current value: None   -   size: 6
+A C B2 A C B1 A    -   current value: None   -   size: 7

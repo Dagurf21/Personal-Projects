@@ -23,6 +23,8 @@ class LinkedList():
             return
         
         self.head = self.head.next
+
+        return self.head
     
     def push_back(self, data): # TODO -> DONE
         new_node = Node(data)
@@ -39,15 +41,24 @@ class LinkedList():
         curr.next = new_node
 
     def pop_back(self):
-        if self.head is None:
-            return
-        
+
+        if not self.head.next:
+            value = self.head.data
+            self.head = None
+            return value
+
+        # Traverse to the second-to-last element
         curr = self.head
-        while (curr.next.next):
+        while curr.next and curr.next.next:
             curr = curr.next
 
-        curr.next = None
-        
+        # Save the value of the last element
+        value = curr.next.data
+
+        # Remove the last element
+        curr.next = None        
+
+        return value
 
     def get_size(self): # TODO -> DONE
         curr = self.head
@@ -70,7 +81,7 @@ class LinkedList():
     
 
 
-ll = LinkedList()
+"""ll = LinkedList()
 ll.push_back(1)
 ll.push_back(2)
 ll.push_back(3)
@@ -85,4 +96,4 @@ ll.pop_front()
 print(ll)
 
 ll.pop_back()
-print(ll)
+print(ll)"""

@@ -3,20 +3,17 @@ from my_linked_list import LinkedList
 
 class Queue:
     def __init__(self):
-        # Pick one of these to use.
-        # Stack must have the container you dont choose for Queue
-        
-        self.container = LinkedList()
-        #self.container = ArrayDeque()
+        self.container = ArrayDeque()
 
     def add(self, data):
-        pass
+        self.container.push_back(data)
     
     def remove(self):
-        pass
+        self.container.pop_front()
 
     def get_size(self):
-        return 0
+        return self.container.get_size()
 
     def __str__(self):
-        return ""
+        return str(self.container)
+
