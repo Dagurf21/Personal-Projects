@@ -1,4 +1,4 @@
-from whatever_your_implementation_file_is_called import *
+from bstMAP import *
 
 
 if __name__ == "__main__":
