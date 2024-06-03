@@ -15,6 +15,7 @@ class Node:
         return f"Node(key={self.key}, data={self.data})"
 
 class BSTMap:
+    
     def __init__(self) -> None:
         self.root = None
 
@@ -66,7 +67,6 @@ class BSTMap:
         else:
             return self._find(self.root, key)
             
-
     def _find(self, current_node, key):
         if key < current_node.key:
             if current_node.left is None: 
@@ -86,6 +86,31 @@ class BSTMap:
         else:
             raise NotFoundException
 
+    def contains(self, key):
+        if self.root is None:
+            return False
+        else:
+            return self._contains(self.root, key)
+
+    def _contains(self, current_node, key):
+        if key < current_node.key:
+            if current_node.left is None:
+                return False
+            else:
+                return self._contains(current_node.left, key)
+        
+        if key > current_node.key:
+            if current_node.right is None:
+                return False
+            else:
+                return self._contains(current_node.right, key)
+
+        if key == current_node.key:
+            return True
+    
+        else:
+            raise NotFoundException
+
     def __str__(self) -> str:
         elements = []
         self._in_order_traversal(self.root, elements)
@@ -96,6 +121,24 @@ class BSTMap:
             self._in_order_traversal(node.left, elements)
             elements.append((node.key, node.data))
             self._in_order_traversal(node.right, elements)
+
+    def __setitem__(self, key, data):
+        if self.contains(key): 
+            self.update(key, data)
+        else:
+            self.insert(key, data)
+    
+    def __getitem__(self, key):
+        if self.contains(key):
+            return self.find(key)
+        else:
+            raise NotFoundException
+
+    def __len__(self):
+        elements = []
+        self._in_order_traversal(self.root, elements)
+        return len(elements)
+        
 
 # Usage Example
 bst_map = BSTMap()
@@ -108,5 +151,3 @@ bst_map.insert(7, 'seven')
 print("output: " + str(bst_map))  # Output: {3:three} {5:five} {7:seven} {10:ten} {15:fifteen}
 
 
-finding = bst_map.find(7)
-print(finding)
